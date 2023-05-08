@@ -1,0 +1,14 @@
+.author {
+  width: 600px;
+  margin: auto;
+}
+
+.author-button {
+  margin-top: 20px;
+  height: 100px;
+  width: 600px;
+  border: none;
+  color: #ffffffff;
+  background: #333333;
+  text-align: start;
+}

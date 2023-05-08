@@ -1,0 +1,12 @@
+.random-button {
+  width: 66px;
+  height: 22px;
+  justify-content: end;
+  align-items: center;
+  border: none;
+  background-color: #ffffff;
+  height: 50px;
+  font-size: 18px;
+
+  color: #333333;
+}

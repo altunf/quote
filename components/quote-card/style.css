@@ -1,0 +1,16 @@
+.quote-card {
+  display: flex;
+  width: 700px;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8em;
+}
+.quote {
+  border-left: 8px solid #f7df94;
+}
+
+.p {
+  font-size: 36px;
+  margin-left: 40px;
+}
