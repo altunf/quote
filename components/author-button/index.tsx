@@ -1,7 +1,8 @@
 "use client";
-import "./style.css";
-import { getRandomQuotes } from "@/services";
 import { useQuoteContext } from "@/context";
+import "./style.css";
+import getRandomQuotes from "@/services";
+
 import Link from "next/link";
 
 const Author = () => {
@@ -11,8 +12,20 @@ const Author = () => {
 
   return (
     <div className="author">
-      <Link href="/author-page">
-        <button className="author-button" onClick={fetchQuotes}>
+      <Link
+        href={{
+          pathname: "/author",
+          query: {
+            author: author,
+          },
+        }}
+      >
+        <button
+          className="author-button"
+          onClick={() => {
+            fetchQuotes();
+          }}
+        >
           <h3>{author} </h3>
           <div>{genre}</div>
         </button>

@@ -1,5 +1,5 @@
 "use client";
-import { getRandomQuotes } from "@/services";
+import getRandomQuotes from "@/services";
 import Quote from "../quote-card";
 
 const RandomQuote = () => {

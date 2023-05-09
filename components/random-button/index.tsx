@@ -1,7 +1,8 @@
 "use client";
-import { useQuoteContext } from "@/context";
+
 import { raleway } from "@/styles/fonts";
 import "./style.css";
+import { useQuoteContext } from "@/context";
 
 const Random = () => {
   const { fetchRandom }: any = useQuoteContext();
