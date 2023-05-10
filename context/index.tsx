@@ -8,7 +8,6 @@ export const QuoteContextProvider = ({ children }: any) => {
   const [author, setAuthor] = useState([]);
   const [genre, setGenre] = useState([]);
   const [authorDetail, setAuthorDetail] = useState([]);
-  const [authorName, setAuthorName] = useState("");
 
   const fetchQuotes = async function (name?: string) {
     if (name) {
@@ -17,14 +16,6 @@ export const QuoteContextProvider = ({ children }: any) => {
       );
       const quotes = await res.json();
       setAuthorDetail(quotes.data);
-      setAuthorName(quotes.data[0].quoteAuthor);
-    } else {
-      const res = await fetch(
-        `https://quote-garden.onrender.com/api/v3/quotes?author=${author}`
-      );
-      const quotes = await res.json();
-      setAuthorDetail(quotes.data);
-      setAuthorName(quotes.data[0].quoteAuthor);
     }
   };
 
@@ -41,7 +32,6 @@ export const QuoteContextProvider = ({ children }: any) => {
   return (
     <QuoteContext.Provider
       value={{
-        authorName,
         fetchQuotes,
         fetchRandom,
         authorDetail,

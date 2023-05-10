@@ -1,24 +1,21 @@
 "use client";
+import { useEffect } from "react";
 import Quote from "@/components/quote-card";
 import { useQuoteContext } from "@/context";
-
-import { raleway700 } from "@/styles/fonts";
-import "./style.css";
 import { useSearchParams } from "next/navigation";
-import { useEffect } from "react";
 
-const page = () => {
+import "./style.css";
+import { raleway700 } from "@/styles/fonts";
+
+const AuthorDetail = () => {
+  const { fetchQuotes, authorDetail, setAuthor }: any = useQuoteContext();
   const searchParams = useSearchParams();
   const name = searchParams.get("author");
-
-  const { fetchQuotes, authorDetail, setAuthor }: any = useQuoteContext();
 
   useEffect(() => {
     setAuthor(name);
     fetchQuotes(name);
   }, [name]);
-
-  console.log(authorDetail);
 
   return (
     <div>
@@ -33,4 +30,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default AuthorDetail;

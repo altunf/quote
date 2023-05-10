@@ -1,6 +1,17 @@
 .random-button {
-  width: 66px;
-  height: 22px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 2%;
+  align-items: center;
+  border: none;
+  background-color: #ffffff;
+  height: 50px;
+  font-size: 18px;
+  color: #333333;
+}
+
+.button-div {
+  display: flex;
   justify-content: end;
   align-items: center;
   border: none;
